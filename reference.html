@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>尺寸與配色 | Pixel Art 入門指南</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo">Pixel Art 入門指南</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="tools.html">工具介紹</a></li>
+        <li><a href="reference.html" class="active">尺寸與配色</a></li>
+        <li><a href="canvas.html">畫板與作品</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== 尺寸對照表 ===== -->
+    <section>
+      <h2>畫布要開多大？</h2>
+      <p>畫布越大，能畫的細節越多，但要填的格子也越多。新手建議從小尺寸開始。</p>
+
+      <table class="size-table">
+        <caption>常見像素畫布尺寸</caption>
+        <thead>
+          <tr>
+            <th scope="col">尺寸</th>
+            <th scope="col">格子數</th>
+            <th scope="col">適合畫什麼</th>
+            <th scope="col">難度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>16×16</td>
+            <td>256 格</td>
+            <td>小圖示、道具、簡單的表情</td>
+            <td>入門</td>
+          </tr>
+          <tr>
+            <td>32×32</td>
+            <td>1,024 格</td>
+            <td>遊戲角色、社群頭像</td>
+            <td>普通</td>
+          </tr>
+          <tr>
+            <td>64×64</td>
+            <td>4,096 格</td>
+            <td>有表情和服裝細節的角色</td>
+            <td>進階</td>
+          </tr>
+          <tr>
+            <td>128×128</td>
+            <td>16,384 格</td>
+            <td>場景、較大的插圖</td>
+            <td>困難</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== 配色小技巧 ===== -->
+    <section>
+      <h2>選色的小技巧</h2>
+      <ul>
+        <li>顏色越少越好，新手先用 4 到 8 種顏色就夠了。</li>
+        <li>同一個顏色準備一深一淺，深的畫陰影、淺的畫亮面，物體就會有立體感。</li>
+        <li>不要用純黑畫輪廓，換成很深的藍或紫，畫面會比較柔和。</li>
+        <li>想找現成的調色盤，可以到
+            <a href="https://lospec.com/palette-list" target="_blank" rel="noopener">Lospec 調色盤清單</a>
+            挑選。</li>
+      </ul>
+    </section>
+
+    <!-- ===== JS 功能：隨機配色產生器 ===== -->
+    <section>
+      <h2>隨機配色產生器</h2>
+      <p>沒有靈感的時候，按一下按鈕，看看會跑出哪五個顏色。</p>
+      <button id="generate-btn" class="button" type="button">產生新配色</button>
+      <div id="palette-output" class="swatch-row"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Pixel Art 入門指南</p>
+  </footer>
+
+  <script src="js/palette.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>畫板與作品 | Pixel Art 入門指南</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo">Pixel Art 入門指南</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="tools.html">工具介紹</a></li>
+        <li><a href="reference.html">尺寸與配色</a></li>
+        <li><a href="canvas.html" class="active">畫板與作品</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== JS 功能 ①：像素畫板 ===== -->
+    <section>
+      <h2>試試看：像素畫板</h2>
+      <p>先選一個顏色，再點格子上色，也可以<strong>按住滑鼠左鍵拖曳</strong>連續畫。
+         沒有靈感的話，先按「產生新配色」，看到喜歡的色碼再用下方的顏色選擇器選取。
+         換尺寸會清掉目前的畫面。</p>
+
+      <!-- 配色產生器：跟 reference.html 用同一支 palette.js -->
+      <button id="generate-btn" class="button" type="button">產生新配色</button>
+      <div id="palette-output" class="swatch-row"></div>
+
+      <div class="tools-bar">
+        <label for="color-picker">顏色：</label>
+        <input type="color" id="color-picker" value="#ff004d">
+        <label for="size-select">尺寸：</label>
+        <select id="size-select">
+          <option value="8">8×8</option>
+          <option value="16" selected>16×16</option>
+          <option value="32">32×32</option>
+        </select>
+        <button id="clear-btn" class="button" type="button">清空畫板</button>
+      </div>
+
+      <!-- 格子由 canvas.js 產生，這裡先放空的 -->
+      <div id="pixel-board" class="pixel-board"></div>
+    </section>
+
+    <!-- ===== 作品展示 ===== -->
+    <section>
+      <h2>作品展示</h2>
+      <p>下面是用 12×12 畫的小圖，放大後每一格都看得很清楚。</p>
+
+      <div class="gallery">
+        <figure>
+          <img class="pixel-img" src="images/heart.png" alt="紅色愛心像素圖">
+          <figcaption>愛心</figcaption>
+        </figure>
+        <figure>
+          <img class="pixel-img" src="images/slime.png" alt="綠色史萊姆像素圖，有兩顆眼睛">
+          <figcaption>史萊姆</figcaption>
+        </figure>
+        <figure>
+          <img class="pixel-img" src="images/star.png" alt="黃色星星像素圖">
+          <figcaption>星星</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Pixel Art 入門指南 &mdash; Web Programming 期中作業</p>
+  </footer>
+
+  <script src="js/palette.js"></script>
+  <script src="js/canvas.js"></script>
+</body>
+</html>

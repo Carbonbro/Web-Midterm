@@ -156,6 +156,129 @@ section {
   margin-bottom: 8px;
 }
 
+/* ===== 表格 ===== */
+.size-table {
+  width: 100%;
+  border-collapse: collapse;   /* 相鄰的邊框合併成一條 */
+  background-color: var(--white);
+  border: 3px solid var(--ink);
+}
+
+.size-table caption {
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.size-table th,
+.size-table td {
+  padding: 10px 14px;
+  border: 2px solid var(--ink);
+  text-align: left;
+}
+
+.size-table th {
+  background-color: var(--ink);
+  color: var(--white);
+}
+
+.size-table tbody tr:hover {
+  background-color: var(--yellow);   /* 滑鼠移到哪一列，那一列就變色 */
+}
+
+/* ===== 配色產生器 ===== */
+.swatch-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  margin-bottom: 24px;   /* 下面接其他內容時留一點空隙 */
+}
+
+.swatch {
+  width: 90px;
+  height: 90px;
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.swatch-label {
+  margin: 8px 0 0;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ===== 像素畫板 ===== */
+.tools-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#color-picker {
+  width: 48px;
+  height: 40px;
+  border: 3px solid var(--ink);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+#size-select {
+  padding: 8px 10px;
+  border: 3px solid var(--ink);
+  background-color: var(--white);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#size-select:hover {
+  background-color: var(--yellow);
+}
+
+.pixel-board {
+  user-select: none;             /* 拖曳時不要選取到文字或元素 */
+  display: grid;                 /* 欄數由 canvas.js 設定 */
+  width: 384px;                  /* 16 格 x 每格 24px */
+  max-width: 100%;               /* 手機上不要超出螢幕 */
+  aspect-ratio: 1 / 1;           /* 維持正方形 */
+  border: 4px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  background-color: var(--white);
+}
+
+.pixel {
+  background-color: var(--white);
+  border: 1px solid #d5d9e6;     /* 淡淡的格線 */
+  cursor: pointer;
+}
+
+.pixel:hover {
+  outline: 2px solid var(--pink);   /* 滑鼠移到哪一格就標出來 */
+  outline-offset: -2px;
+}
+
+/* ===== 作品展示 ===== */
+.gallery {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.gallery figure {
+  margin: 0;
+  text-align: center;
+}
+
+.gallery figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
 /* ===== 頁尾 ===== */
 .site-footer {
   background-color: var(--ink);
